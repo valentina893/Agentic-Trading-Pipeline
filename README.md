@@ -1,1 +1,1 @@
-# Python scripts for langchain workshop on 9/8
+# Python scripts for langchain workshop on 9/15
