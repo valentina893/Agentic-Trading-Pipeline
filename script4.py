@@ -12,6 +12,9 @@ duckduckgo = DuckDuckGoSearchResults(max_results=3)
 search_query = "Apple stock price and recent news"
 web_search = duckduckgo.run(search_query)
 
+print("web search:")
+print(web_search)
+
 researcher_prompt = PromptTemplate(
     template='''You are a financial research assistant.
 
@@ -56,9 +59,6 @@ analyst_agent = LLMChain(
     llm=llm,
     prompt=analyst_prompt
 )
-
-print("web search:")
-print(web_search)
 
 summary = researcher_agent.run(web_search=web_search)
 
